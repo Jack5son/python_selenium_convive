@@ -86,7 +86,7 @@ class WebBrowser:
         self._date_reserve = date_reserve.strftime('%Y-%m-%d')
         dia_s = date_reserve.isoweekday()
         print(dia_s)
-        if dia_s in (2, 4):
+        if dia_s in (2, 4, 7):
             dia_s = self._config.days[dia_s]
             self._logger.warning(f"{dia_s} não é dia de reservar")
             return False
